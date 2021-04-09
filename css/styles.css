@@ -24,7 +24,7 @@ html{
 .navbar{
     /* background-color: rgba(0, 0, 0, 0.292); */
     position: fixed;
-    width: 80%;
+    width: 100%;
     left: 50%;
     transform: translateX(-50%);
     height: 6em;
@@ -75,7 +75,7 @@ html{
     width: max-content;
     position: absolute;
     bottom: -12.5rem;
-    left: 5rem;
+    left: 5vw;
     z-index: 4;
 }
 
@@ -90,11 +90,13 @@ html{
 .about{
     height: 42vh;
     display: flex;
+    align-items:center;
 }
-.about .about-title{
+.about-title{
     height: 100%;
     width: 35rem;
     display: flex;
+    flex: 1;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
@@ -103,20 +105,37 @@ html{
 
 .about-info{
     padding: 2rem;
+    flex: 2;
 }
-.info-card{
-    margin: .5em 0;
+
+.hobbies{
+    flex: 1;
+    text-align: center;
+}
+.hobbies-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .hobby{
     border: 4px solid yellow;
-    font-size: 2rem;
+    font-size: 1.7rem;
     border-radius: 5rem;
-    width: 15rem;
+    width: 45%;
     display: inline-block;
     text-align: center;
     padding: .2em;
-    margin: 1em .2em;
+    margin: .5em .2em;
 }
+
+/* ##################### SKILLS SECTION ################################# */
+.skills{
+    height: 100vh;
+}
+
+/* ===================== SKILLS BOX ===================================== */
+
 
 
 /* ###################### UTILITY CLASSES ################################ */
