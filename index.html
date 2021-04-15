@@ -11,7 +11,7 @@
     
     
 </head>
-<body class="bg-black Galdeano">
+<body class="bg-dark Galdeano">
     <!-- Header / Home Section Starts here -->
     <header id="home" class="header unselectable">
         
@@ -20,9 +20,9 @@
                 <ul class="nav-list font-small">
                     
                     <li class="nav-item"><a href="#home">Home</a></li>
-                    <li class="nav-item"><a href="#">Skills</a></li>
-                    <li class="nav-item"><a href="#">Gallery</a></li>
-                    <li class="nav-item"><a href="#">Contact</a></li>
+                    <li class="nav-item"><a href="#skills">Skills</a></li>
+                    <li class="nav-item"><a href="#gallery">Gallery</a></li>
+                    <li class="nav-item"><a href="#social">Contact</a></li>
                 </ul>
         </nav>
         <!-- Navigation Bar End -->
@@ -107,16 +107,16 @@
     <!-- Header / Home Section Ends here -->
 
     <!-- Skills Section Start -->
-    <section class="skills bg-light-gray">
+    <section id="skills" class="skills bg-dark">
 
         <!-- Skills Box -->
         <div class="skills-box">
-            <h1 class="font-large">Skills Known</h1>
+            <h1 class="font-large color-white">My Skills</h1>
 
-            <div class="skill">
+            <div class="skill bg-blue-g color-white shadow-white-i">
                 <div class="skill-icon"><img src="./images/java.png" alt="Java"></div>
                 <div class="skill-name">
-                    <h2 class="font-med color-gray">Java</h2>
+                    <h2 class="font-med">Java</h2>
                 </div>
                 <div class="skill-rating">
                     <i class="fas fa-star fa-2x"></i>
@@ -125,10 +125,10 @@
                 </div>
             
             </div>
-            <div class="skill">
+            <div class="skill bg-sunset-g shadow-black-i">
                 <div class="skill-icon"><img src="./images/front-end.png" alt="Font-End"></div>
                 <div class="skill-name">
-                    <h2 class="font-med color-gray">Front-End</h2>
+                    <h2 class="font-med">Front-End</h2>
                 </div>
                 <div class="skill-rating">
                     <i class="fas fa-star fa-2x"></i>
@@ -137,10 +137,10 @@
                 </div>
             </div>
 
-            <div class="skill">
+            <div class="skill bg-blue-g color-white shadow-white-i">
                 <div class="skill-icon"><img src="./images/cpp.png" alt="C++"></div>
                 <div class="skill-name">
-                    <h2 class="font-med color-gray">C++</h2>
+                    <h2 class="font-med">C++</h2>
                 </div>
                 <div class="skill-rating">
                     <i class="fas fa-star fa-2x"></i>
@@ -149,10 +149,10 @@
                 </div>
             </div>
 
-            <div class="skill">
+            <div class="skill bg-sunset-g shadow-black-i">
                 <div class="skill-icon"><img src="./images/backend2.png" alt="Back-End"></div>
                 <div class="skill-name">
-                    <h2 class="font-med color-gray">Back-End</h2>
+                    <h2 class="font-med">Back-End</h2>
                 </div>
                 <div class="skill-rating">
                     <i class="fas fa-star fa-2x"></i>
@@ -161,10 +161,10 @@
                 </div>
             </div>
 
-            <div class="skill">
+            <div class="skill bg-blue-g color-white shadow-white-i">
                 <div class="skill-icon"><img src="./images/data-structures.png" alt="data-structures"></div>
                 <div class="skill-name">
-                    <h2 class="font-med color-gray">Data Structures</h2>
+                    <h2 class="font-med">Data Structures</h2>
                 </div>
                 <div class="skill-rating">
                     <i class="fas fa-star fa-2x"></i>
@@ -176,13 +176,96 @@
         </div>
 
         <!-- Projects Box -->
-        <div class="projects">
-            Projects
+        <div class="projects bg-blue">
+            
+            <!-- Project Container -->
+            <div class="project-container">
+                
+                <!-- Slide 1: Each slide has 2 screenshots and one text div -->
+                <div class="slide">
+
+                    <div class="slide-content"><img src="./images/p1s1.png" alt="Home Screen"></div>
+                    
+                    <div class="slide-content"><img src="./images/p1s3.png" alt="Contacts Screen"></div>
+
+                    <div class="slide-content">
+                        <h1 class="font-med color-white">Travel Website</h1>
+                        <p class="capitalize color-white font-very-small">
+                            A responsive website entirely made up of HTML and CSS only.
+                        </p>
+                    </div>
+
+                    <div class="slide-content"><img src="./images/p1s2.png" alt="Contacts Screen"></div>
+
+                </div>
+
+                <div class="slide">
+
+                    <div class="slide-content"><img src="./images/p2s1.png" alt="Home Screen"></div>
+                    
+                    <div class="slide-content"><img src="./images/p2s2.png" alt="Contacts Screen"></div>
+
+                    <div class="slide-content">
+                        <h1 class="font-med color-white">Brick Break Game</h1>
+                        <p class="capitalize color-white font-very-small">
+                            A simple 2D game made with Java. Break all the bricks till all of them are destroyed.
+                        </p>
+                    </div>
+
+                    <div class="slide-content"><img src="./images/p2s2.png" alt="Contacts Screen"></div>
+
+                </div>
+
+                <div class="slide">
+
+                    <div class="slide-content"><img src="./images/p1s1.png" alt="Home Screen"></div>
+                    
+                    <div class="slide-content"><img src="./images/p1s3.png" alt="Contacts Screen"></div>
+
+                    <div class="slide-content">
+                        <h1 class="font-med color-white">Travel Website</h1>
+                        <p class="capitalize color-white font-very-small">
+                            A responsive website entirely made up of HTML and CSS only.
+                        </p>
+                    </div>
+
+                    <div class="slide-content"><img src="./images/p1s2.png" alt="Contacts Screen"></div>
+
+                </div>
+
+
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+
+            <!-- The dots/circles -->
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+
         </div>
     </section>
     <!-- Skills Section End -->
 
-    <div style="height: 200vh;"></div>
+    <!-- Gallery Section Start -->
+    <section id="gallery" class="gallery bg-dark">
+        Container for Gallery
+        <div class="gallery-container">
+
+            
+
+        </div>
+    </section>
+    <!-- Gallery Section End -->
+
+    <!-- Footer / Social Section Start-->
+    <footer id="social" class="social bg-dark">
+
+    </footer>
+    <!-- Footer / Social Section End -->
 
     <!-- Script Files -->
     <script src="https://kit.fontawesome.com/7c1c1123fe.js" crossorigin="anonymous"></script>

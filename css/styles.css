@@ -15,6 +15,9 @@ html{
     font-size: 50%;
 }
 
+:focus{
+    outline: none;
+}
 /* ######################### HEADER / HOME SECTION ################################# */
 .header{
     height: 98vh;
@@ -24,16 +27,15 @@ html{
 .navbar{
     /* background-color: rgba(0, 0, 0, 0.292); */
     position: fixed;
-    background-color: #34323255;
     width: 100%;
     left: 50%;
     transform: translateX(-50%);
     height: 6em;
     z-index: 2;
-    transition: all .15s linear;
+    transition: all .2s linear;
 }
 .navbar-scrolled{
-    background-color: #343232;
+    background-color: #375cba;
 }
 .nav-list{
     list-style-type: none;
@@ -42,17 +44,18 @@ html{
     align-items: center;
 }
 .nav-item a{
-    text-decoration: none;
     color: white;
+    text-decoration: none;
     display: block;
     padding: 1rem 1rem;
-    transition: all .2s ease-out;
+    transition: all .175s ease-out;
     margin: .2em .1em .1em .1em;
     border-bottom: 2px solid transparent;
 }
 
-.nav-item a:hover{
+.nav-item a:hover, .nav-item a:focus{
     border-bottom: 2px solid white;
+    transform: scale(1.1);
 }
 
 /* ====================== Profile: Cover Photo and DP ================= */
@@ -84,7 +87,7 @@ html{
     height: 25rem;
     width: 25rem;
     border-radius: 50%;
-    border: .5rem solid rgb(47, 46, 46);
+    border: .5rem solid #070925;
 }
 
 /* ======================== ABOUT SECTION =========================== */
@@ -128,36 +131,44 @@ html{
     text-align: center;
     padding: .2em;
     margin: .5em .2em;
+    transition: all .2s ease-out;
+}
+.hobby:hover{
+    transform: scale(1.5);
 }
 
 /* ##################### SKILLS SECTION ################################# */
 .skills{
-    height: 100vh;
+    height: 89vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.skills::after{
-    content: "";
-    clear: both;
-}
+
+/* ===================== SKILLS BOX ===================================== */
+
 .skills-box{
     flex:1;
     height: 90%;
     margin: 2rem;
-    box-shadow: 0rem 0 1rem rgb(81, 80, 80);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 .skills-box h1{
     text-align: center;
+    margin: 1rem 0;
 }
 .skill{
     height: 15%;
     margin: .5rem 1rem;
     display: flex;
     justify-content: center;
+    border-radius: 2rem;
+    transition: all .2s ease-out;
+}
+.skill:hover{
+    transform: scale(1.1);
 }
 .skill-icon{
     height: 100%;
@@ -187,26 +198,113 @@ html{
 .skill-name h2{
     text-align: center;
 }
+
+/* ================ PROJECTS section ======================== */
+
 .projects{
     flex: 3;
     height: 90%;
     margin: 2rem;
-    box-shadow: 0rem 0 1rem rgb(81, 80, 80);
+    position: relative;
+    border-radius: 1rem;
 }
 
-/* ===================== SKILLS BOX ===================================== */
+.project-container{
+    position: relative;
+}
+
+.slide{
+    width: 100%;
+    height: 76vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.slide-content{
+    position: relative;
+    width: 40%;
+    height: 47.5%;
+    margin: .5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-content img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* next and previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+  transition: all .1s ease-out;
+}
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev:hover,
+.next:hover{
+    background-color: #0000008f;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    margin: 1rem .2rem;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #041169;
+}
 
 
+
+/* ###################### GALLERY SECTION ############################### */
+.gallery{
+    height: 89vh;
+    border: 2px solid white;
+    margin: 1rem;
+}
+
+/* ##################### SOCIAL SECTION: FOOTER ####################### */
+.social{
+    height: 50vh;
+    border: 2px solid silver;
+    margin: 1rem;
+}
 
 /* ###################### UTILITY CLASSES ################################ */
 
-/* ============ Container Class ================== */
-.container{
-    width: 80%;
-    margin: auto;
-}
-
 /* ============ Font-size classes =============== */
+.font-very-small{
+    font-size: 1.5rem;
+}
 .font-small{
     font-size: 2.5rem;
 }
@@ -263,10 +361,45 @@ html{
     background-color: white;
 }
 .bg-dark{
-    background-color: #3d3c3c;   
+    background-color: #0e0d18;   
 }
 .bg-black{
     background-color: rgb(7, 9, 37);
+}
+.bg-blue{
+    background-color: #375cba;
+}
+.bg-blue-g{
+    background: rgb(2,0,36);
+    background: linear-gradient(17deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 24%, rgba(0,212,255,1) 100%);
+}
+.bg-gold{
+    background-color: rgb(255, 174, 0);
+}
+.bg-silver{
+    background-color: rgb(187, 187, 187);
+}
+.bg-sunset-g{
+    background: #bc4e9c;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #f80759, #bc4e9c);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #f80759, #bc4e9c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/* ============= Shadow Color classes ======= */
+.shadow-brown-i{
+    box-shadow: -.3rem .3rem .8rem #33160d inset;
+}
+.shadow-black-i{
+    box-shadow: -.3rem .3rem .8rem #000 inset;
+}
+.shadow-white-i{
+    box-shadow: -.3rem .3rem .8rem #ffffffaf inset;
+}
+.shadow-black{
+    box-shadow: -.3rem .3rem .8rem #000;
+}
+.shadow-white{
+    box-shadow: -.3rem .3rem .8rem #ffffffaf;
 }
 
 /* ============= Miscellaneous Classes ====== */
